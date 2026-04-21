@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   frontend:
     build: ./frontend
@@ -17,7 +16,7 @@ services:
   prometheus:
     image: prom/prometheus:latest
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml:rw
+      - /var/jenkins_home/workspace/FusionpactPipeline/prometheus.yml:/etc/prometheus/prometheus.yml
       - prometheus_data:/prometheus
     ports:
       - "9090:9090"
