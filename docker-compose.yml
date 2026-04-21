@@ -16,7 +16,6 @@ services:
   prometheus:
     image: prom/prometheus:latest
     volumes:
-      - /var/jenkins_home/workspace/FusionpactPipeline/prometheus.yml:/etc/prometheus/prometheus.yml
       - prometheus_data:/prometheus
     ports:
       - "9090:9090"
